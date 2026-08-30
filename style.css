@@ -1,0 +1,133 @@
+:root {
+  --cream: #fffaf0;
+  --brown: #4d3327;
+  --gold: #b56a2d;
+  --light-gold: #f3e1c6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--brown);
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
+
+header,
+main,
+footer {
+  width: min(100% - 2rem, 960px);
+  margin: auto;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1rem 0;
+  border-bottom: 2px solid var(--gold);
+}
+
+header img {
+  display: block;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  font-weight: bold;
+}
+
+nav a,
+main a {
+  color: var(--gold);
+}
+
+main {
+  padding: 1.5rem 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Georgia, serif;
+  color: var(--brown);
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  margin-top: 2rem;
+}
+
+img,
+video,
+audio {
+  max-width: 100%;
+}
+
+figure {
+  margin: 1rem 0;
+}
+
+figcaption {
+  padding: 0.5rem;
+  background: var(--light-gold);
+}
+
+form,
+fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+fieldset {
+  padding: 1rem;
+  border: 1px solid var(--gold);
+}
+
+input,
+select,
+textarea,
+button {
+  font: inherit;
+  padding: 0.5rem;
+}
+
+button {
+  align-self: flex-start;
+  background: var(--gold);
+  color: white;
+  border: 0;
+}
+
+footer {
+  padding: 1rem 0;
+  border-top: 2px solid var(--gold);
+}
+
+@media (min-width: 700px) {
+  header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  main > section {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+
+  main > section > * {
+    flex: 1;
+  }
+}

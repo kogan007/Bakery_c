@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | North Star Bakery</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="index.html"><img src="bakery-logo_c.png" alt="North Star Bakery logo" width="80" /></a>
+      <nav aria-label="Main navigation">
+        <a href="index.html">Home</a> |
+        <a href="products.html">Products</a> |
+        <a href="about.html">About</a> |
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Contact and Pre-orders</h1>
+      <p>Send a request and we will confirm availability.</p>
+
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Your request</legend>
+          <p><label for="name">Name</label><br /><input id="name" name="name" type="text" required /></p>
+          <p><label for="email">Email</label><br /><input id="email" name="email" type="email" required /></p>
+          <p><label for="pickup-date">Pickup date</label><br /><input id="pickup-date" name="pickup-date" type="date" /></p>
+          <p>
+            <label for="request-type">Request type</label><br />
+            <select id="request-type" name="request-type" required>
+              <option value="">Choose one</option>
+              <option>Pre-order</option>
+              <option>General question</option>
+            </select>
+          </p>
+          <p><label for="details">Item details</label><br /><textarea id="details" name="details" rows="4" required></textarea></p>
+          <p><label for="allergies">Allergy notes</label><br /><textarea id="allergies" name="allergies" rows="3"></textarea></p>
+        </fieldset>
+        <p><button type="submit">Send request</button></p>
+      </form>
+
+      <h2>Location and hours</h2>
+      <p>123 Maple Street, North Star</p>
+      <p>Tue–Fri: 7 AM–5 PM<br />Sat–Sun: 8 AM–3 PM<br />Closed Monday</p>
+
+    </main>
+
+    <footer><p>North Star Bakery</p></footer>
+  </body>
+</html>
