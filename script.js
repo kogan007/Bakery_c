@@ -16,6 +16,12 @@ const productCategories = {
   }
 };
 
+const validationMessages = {
+  name: "Please enter your name.",
+  email: "Please enter a valid email address.",
+  details: "Please provide at least 5 characters about your request."
+};
+
 function showProductCategory(category) {
   const results = document.querySelector("#product-results");
   const product = productCategories[category];
@@ -63,17 +69,17 @@ function validateContactForm(event) {
   message.textContent = "";
 
   if (!name.value.trim()) {
-    setFieldError("name", "Please enter your name.");
+    setFieldError("name", validationMessages.name);
     formIsValid = false;
   }
 
   if (!emailPattern.test(email.value.trim())) {
-    setFieldError("email", "Please enter a valid email address.");
+    setFieldError("email", validationMessages.email);
     formIsValid = false;
   }
 
   if (details.value.trim().length < 5) {
-    setFieldError("details", "Please provide at least 5 characters about your request.");
+    setFieldError("details", validationMessages.details);
     formIsValid = false;
   }
 
