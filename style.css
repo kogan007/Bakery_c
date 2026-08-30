@@ -1,8 +1,8 @@
 :root {
-  --cream: #fffaf0;
-  --brown: #4d3327;
-  --gold: #b56a2d;
-  --light-gold: #f3e1c6;
+  --cream: #fff8f0;
+  --brown: #6b3e26;
+  --peach: #d88c5a;
+  --charcoal: #2f2a26;
 }
 
 * {
@@ -12,7 +12,7 @@
 body {
   margin: 0;
   background: var(--cream);
-  color: var(--brown);
+  color: var(--charcoal);
   font-family: Arial, sans-serif;
   line-height: 1.5;
 }
@@ -20,7 +20,7 @@ body {
 header,
 main,
 footer {
-  width: min(100% - 2rem, 960px);
+  width: min(calc(100% - 2rem), 960px);
   margin: auto;
 }
 
@@ -29,7 +29,7 @@ header {
   flex-direction: column;
   gap: 0.75rem;
   padding: 1rem 0;
-  border-bottom: 2px solid var(--gold);
+  border-bottom: 2px solid var(--peach);
 }
 
 header img {
@@ -45,7 +45,7 @@ nav {
 
 nav a,
 main a {
-  color: var(--gold);
+  color: var(--peach);
 }
 
 main {
@@ -79,7 +79,7 @@ figure {
 
 figcaption {
   padding: 0.5rem;
-  background: var(--light-gold);
+  background: var(--cream);
 }
 
 form,
@@ -91,7 +91,7 @@ fieldset {
 
 fieldset {
   padding: 1rem;
-  border: 1px solid var(--gold);
+  border: 1px solid var(--peach);
 }
 
 input,
@@ -104,14 +104,22 @@ button {
 
 button {
   align-self: flex-start;
-  background: var(--gold);
+  background: var(--peach);
   color: white;
   border: 0;
 }
 
 footer {
   padding: 1rem 0;
-  border-top: 2px solid var(--gold);
+  border-top: 2px solid var(--peach);
+}
+
+.error {
+  color: #9b1c1c;
+}
+
+#form-message {
+  font-weight: bold;
 }
 
 @media (min-width: 700px) {

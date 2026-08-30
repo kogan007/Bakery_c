@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact | North Star Bakery</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
     <header>
@@ -21,11 +22,11 @@
       <h1>Contact and Pre-orders</h1>
       <p>Send a request and we will confirm availability.</p>
 
-      <form action="#" method="post">
+      <form action="#" method="post" novalidate>
         <fieldset>
           <legend>Your request</legend>
-          <p><label for="name">Name</label><br /><input id="name" name="name" type="text" required /></p>
-          <p><label for="email">Email</label><br /><input id="email" name="email" type="email" required /></p>
+          <p><label for="name">Name</label><br /><input id="name" name="name" type="text" required aria-describedby="name-error" /><br /><span id="name-error" class="error" aria-live="polite"></span></p>
+          <p><label for="email">Email</label><br /><input id="email" name="email" type="email" required aria-describedby="email-error" /><br /><span id="email-error" class="error" aria-live="polite"></span></p>
           <p><label for="pickup-date">Pickup date</label><br /><input id="pickup-date" name="pickup-date" type="date" /></p>
           <p>
             <label for="request-type">Request type</label><br />
@@ -35,10 +36,11 @@
               <option>General question</option>
             </select>
           </p>
-          <p><label for="details">Item details</label><br /><textarea id="details" name="details" rows="4" required></textarea></p>
+          <p><label for="details">Item details</label><br /><textarea id="details" name="details" rows="4" required aria-describedby="details-error"></textarea><br /><span id="details-error" class="error" aria-live="polite"></span></p>
           <p><label for="allergies">Allergy notes</label><br /><textarea id="allergies" name="allergies" rows="3"></textarea></p>
         </fieldset>
         <p><button type="submit">Send request</button></p>
+        <p id="form-message" aria-live="polite"></p>
       </form>
 
       <h2>Location and hours</h2>
