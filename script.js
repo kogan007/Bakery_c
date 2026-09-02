@@ -19,6 +19,7 @@ const productCategories = {
 const validationMessages = {
   name: "Please enter your name.",
   email: "Please enter a valid email address.",
+  requestType: "Please select a request type.",
   details: "Please provide at least 5 characters about your request."
 };
 
@@ -58,6 +59,7 @@ function setFieldError(fieldId, message) {
 function validateContactForm(event) {
   const name = document.querySelector("#name");
   const email = document.querySelector("#email");
+  const requestType = document.querySelector("#request-type");
   const details = document.querySelector("#details");
   const message = document.querySelector("#form-message");
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -65,6 +67,7 @@ function validateContactForm(event) {
 
   setFieldError("name", "");
   setFieldError("email", "");
+  setFieldError("request-type", "");
   setFieldError("details", "");
   message.textContent = "";
 
@@ -75,6 +78,11 @@ function validateContactForm(event) {
 
   if (!emailPattern.test(email.value.trim())) {
     setFieldError("email", validationMessages.email);
+    formIsValid = false;
+  }
+
+  if (!requestType.value) {
+    setFieldError("request-type", validationMessages.requestType);
     formIsValid = false;
   }
 
